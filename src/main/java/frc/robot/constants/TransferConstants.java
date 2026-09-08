@@ -18,6 +18,5 @@ public class TransferConstants {
         public static final int ID = 12;
         public static final boolean INVERTED = true;
         public static final boolean FOLLOW_RIGHT = true;
-        public static final boolean FOLLOWER_INVERTED = false;
     }
 }
