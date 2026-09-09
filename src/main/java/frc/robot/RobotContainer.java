@@ -6,14 +6,25 @@ package frc.robot;
 
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.Commands;
+import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
+import frc.robot.commands.MoveIntake;
+import frc.robot.subsytems.IntakeSubsystem;
 
 public class RobotContainer {
+  private final CommandXboxController joystick = new CommandXboxController(0);
+
+  private final IntakeSubsystem intakeSub = new IntakeSubsystem();
+
   public RobotContainer() {
     configureBindings();
   }
 
-  private void configureBindings() {}
+  //vincular comandos a un control
+  private void configureBindings() {
+    joystick.leftTrigger().whileTrue(new MoveIntake(intakeSub));
+  }
 
+  //autonomos
   public Command getAutonomousCommand() {
     return Commands.print("No autonomous command configured");
   }

@@ -1,5 +1,8 @@
 package frc.robot.constants;
 
+import com.ctre.phoenix6.signals.InvertedValue;
+import com.ctre.phoenix6.signals.MotorAlignmentValue;
+
 /* 
  * 3 motores,
  * 2 motores para succionar,
@@ -9,12 +12,15 @@ package frc.robot.constants;
  * ! por defecto, siempre el motor izquierdo seguirá al derecho, y el derecho será el que se controle
  * ! falta definir limites de voltage, pero eso se lo encargo a sebas
  * 
+ * clockwise = en sentido de las manecillas (derecha + e izquierda -)
+ * counter clockwise = en CONTRA del sentido de las manecillas (al reves)
  */
 
 public class IntakeConstants {
     public class RIGHT_MOTOR {
         public static final int ID = 1; //ID de motor
-        public static final boolean INVERTED = false; // Si esta invertido o no
+        public static final InvertedValue INVERTED = InvertedValue.Clockwise_Positive; // Si esta invertido o no
+        public static final double SPEED = 0.0; //velocidad para metodo .set()
         public static final double VOLTAGE = 0.0; // Voltaje a enviar
 
         public static final double AmperageLowerLimit=0;
@@ -27,7 +33,7 @@ public class IntakeConstants {
     public class LEFT_MOTOR {
         public static final int ID = 2; //ID motor
         public static final boolean INVERTED = true; //Si esta invertido o no
-        public static final boolean FOLLOW_RIGHT = true; //Que va a ser un follower del RIGHT MOTOR
+        public static final MotorAlignmentValue FOLLOW_RIGHT = MotorAlignmentValue.Aligned; //Que va a ser un follower del RIGHT MOTOR
         //no es necesario definir un pid para el motor izquierdo
     }
 
@@ -35,7 +41,7 @@ public class IntakeConstants {
         public static final int ID = 3;
         public static final boolean INVERTED = false;
         public static final double SET_SPEED = 0.0;
-        public static final double SET_VOLTAGE = 0.0;
+        public static final double SET_VOLTAGE = 7.5;
 
         public static final double p = 0.0;
         public static final double i = 0.0;

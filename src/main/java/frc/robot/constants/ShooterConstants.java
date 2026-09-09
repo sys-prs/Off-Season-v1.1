@@ -16,42 +16,61 @@ public class ShooterConstants {
         public static final int TOP_ID = 4;
         public static final int BOTTOM_ID = 5;
 
-        public static final double SET_SPEED = 0.0;
         public static final double SET_VOLTAGE = 0.0;
 
         public static final boolean INVERTED = false;
         public static final boolean TOP_FOLLOWS_BOTTOM = true;
+
+        public static final double AmperageLowerLimit=0;
+        public static final double AmperageLimit=0;
+        public static final double AmperageLimitTime=0;
+        public static final double AmperageLimitSteer=0;
     }
 
     public class LEFT_MOTORS {
         public static final int TOP_ID = 6;
         public static final int BOTTOM_ID = 7;
 
-        public static final double SET_SPEED = 0.0;
         public static final double SET_VOLTAGE = 0.0;
 
         public static final boolean INVERTED = false;
         public static final boolean FOLLOWER_INVERTED = false;
         public static final boolean TOP_FOLLOWS_BOTTOM = true;
+
+        
+        public static final double AmperageLowerLimit=0;
+        public static final double AmperageLimit=0;
+        public static final double AmperageLimitTime=0;
+        public static final double AmperageLimitSteer=0;
     }
 
     public class FEEDER_MOTORS {
         public static final int RIGHT_ID = 8;
         public static final int LEFT_ID = 9;
         
-        public static final double SET_SPEED = 0.0;
         public static final double SET_VOLTAGE = 0.0;
 
         public static final boolean INVERTED = false;
         public static final boolean FOLLOWER_INVERTED = false;
         public static final boolean LEFT_FOLLOWS_RIGHT = true;
+
+        
+        public static final double AmperageLowerLimit=0;
+        public static final double AmperageLimit=0;
+        public static final double AmperageLimitTime=0;
+        public static final double AmperageLimitSteer=0;
     }
 
     public class ROLLER_MOTOR {
         public static final int ID = 10;
         public static final boolean INVERTED = false;
 
-        public static final double SET_SPEED = 0.0;
         public static final double SET_VOLTAGE = 0.0;
+
+        
+        public static final double AmperageLowerLimit=0;
+        public static final double AmperageLimit=0;
+        public static final double AmperageLimitTime=0;
+        public static final double AmperageLimitSteer=0;
     }
 }
